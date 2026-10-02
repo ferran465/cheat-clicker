@@ -11,7 +11,7 @@ class ask_keyboard:
         try:
             if self.key == "a":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("a")
         except Exception as A:
@@ -20,7 +20,7 @@ class ask_keyboard:
         try:
             if self.key == "b":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("b")
         except Exception as B:
@@ -29,7 +29,7 @@ class ask_keyboard:
         try:
             if self.key == "c":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("c")
         except Exception as C:
@@ -47,7 +47,7 @@ class ask_keyboard:
         try:
             if self.key == "c":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("c")
         except Exception as E:
@@ -56,7 +56,7 @@ class ask_keyboard:
         try:
             if self.key == "d":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("d")
         except Exception as D:
@@ -65,7 +65,7 @@ class ask_keyboard:
         try:
             if self.key == "e":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("e")
         except Exception as E:
@@ -74,7 +74,7 @@ class ask_keyboard:
         try:
             if self.key == "f":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("f")
         except Exception as F:
@@ -83,7 +83,7 @@ class ask_keyboard:
         try:
             if self.key == "g":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("g")
         except Exception as G:
@@ -92,7 +92,7 @@ class ask_keyboard:
         try:
             if self.key == "h":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("h")
         except Exception as H:
@@ -101,7 +101,7 @@ class ask_keyboard:
         try:
             if self.key == "i":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("i")
         except Exception as I:
@@ -110,7 +110,7 @@ class ask_keyboard:
         try:
             if self.key == "j":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("j")
         except Exception as J:
@@ -119,7 +119,7 @@ class ask_keyboard:
         try:
             if self.key == "k":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("k")
         except Exception as K:
@@ -128,7 +128,7 @@ class ask_keyboard:
         try:
             if self.key == "l":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("l")
         except Exception as L:
@@ -137,7 +137,7 @@ class ask_keyboard:
         try:
             if self.key == "m":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("m")
         except Exception as M:
@@ -146,7 +146,7 @@ class ask_keyboard:
         try:
             if self.key == "n":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("n")
         except Exception as N:
@@ -155,7 +155,7 @@ class ask_keyboard:
         try:
             if self.key == "o":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("o")
         except Exception as O:
@@ -164,7 +164,7 @@ class ask_keyboard:
         try:
             if self.key == "p":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("p")
         except Exception as P:
@@ -173,7 +173,7 @@ class ask_keyboard:
         try:
             if self.key == "q":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("q")
         except Exception as Q:
@@ -182,7 +182,7 @@ class ask_keyboard:
         try:
             if self.key == "r":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("r")
         except Exception as R:
@@ -191,7 +191,7 @@ class ask_keyboard:
         try:
             if self.key == "s":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("s")
         except Exception as S:
@@ -200,7 +200,7 @@ class ask_keyboard:
         try:
             if self.key == "t":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("t")
         except Exception as T:
@@ -209,7 +209,7 @@ class ask_keyboard:
         try:
             if self.key == "u":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("u")
         except Exception as U:
@@ -218,7 +218,7 @@ class ask_keyboard:
         try:
             if self.key == "v":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("v")
         except Exception as V:
@@ -227,7 +227,7 @@ class ask_keyboard:
         try:
             if self.key == "w":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("w")
         except Exception as W:
@@ -236,7 +236,7 @@ class ask_keyboard:
         try:
             if self.key == "x":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("x")
         except Exception as X:
@@ -245,7 +245,7 @@ class ask_keyboard:
         try:
             if self.key == "y":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("y")
         except Exception as Y:
@@ -254,7 +254,7 @@ class ask_keyboard:
         try:
             if self.key == "z":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("z")
         except Exception as Z:
@@ -264,7 +264,7 @@ class ask_keyboard:
         try:
             if self.key == "ñ":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("ñ")
         except Exception as Ñ:
@@ -274,7 +274,7 @@ class ask_keyboard:
         try:
             if self.key == "ç":
                 self.time = int(input("cuanto tiempo quieres establecer: "))
-                if self.time:
+                if self.time == True:
                     await asyncio.sleep(self.time)
                     keyboard.send("ç")
         except Exception as Ç:
