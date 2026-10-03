@@ -9,19 +9,17 @@ class ask_keyboard:
     async def wich_key_do_you_want(self):
         self.key = str(input("que tecla quieres escojer: "))
         try:
-            if self.key == "a":
                 self.ask_time = input("quieres establecer tiempo (y/n) :")
                 if self.ask_time == "y":
                     self.time = int(input("cuanto tiempo quieres establecer: "))
                     if self.time:
                             await asyncio.sleep(self.time)
-                            while True:
-                                keyboard.send("a")
+                            keyboard.send(self.key)
                         
                 elif self.ask_time == "n":
-                        self.loop = input("quieres mejor ejecutarlo en bucle (s/n) :")
+                        self.loop = input("quieres mejor ejecutarlo en bucle (y/n) :")
                         if self.loop == "y":
-                            while True: # no se ejecuta el while...
+                            while True:
                                 keyboard.send("a")
                         else:
                             self.loop == "n"
