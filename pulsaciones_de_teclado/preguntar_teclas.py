@@ -9,21 +9,21 @@ class ask_keyboard:
     async def wich_key_do_you_want(self):
         self.key = str(input("que tecla quieres escojer: "))
         try:
-                self.ask_time = input("quieres establecer tiempo (y/n) :")
-                if self.ask_time == "y":
-                    self.time = int(input("cuanto tiempo quieres establecer: "))
-                    if self.time:
-                            await asyncio.sleep(self.time)
+            self.ask_time = input("quieres establecer tiempo (y/n) :")
+            if self.ask_time == "y":
+                self.time = int(input("cuanto tiempo quieres establecer: "))
+                if self.time:
+                        await asyncio.sleep(self.time)
+                        keyboard.send(self.key)
+                    
+            elif self.ask_time == "n":
+                    self.loop = input("quieres mejor ejecutarlo en bucle (y/n) :")
+                    if self.loop == "y":
+                        while True:
                             keyboard.send(self.key)
-                        
-                elif self.ask_time == "n":
-                        self.loop = input("quieres mejor ejecutarlo en bucle (y/n) :")
-                        if self.loop == "y":
-                            while True:
-                                keyboard.send("a")
-                        else:
-                            self.loop == "n"
-                            return False               
+                    else:
+                        self.loop == "n"
+                        return False               
         except Exception as A:
             print(f"no se ha podido ejecutar la tecla{A}")
 
