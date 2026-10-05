@@ -42,8 +42,11 @@ class cheat_keyboard:
                                     print(f"has interrumpido la acción{bool_interrupt}")
 
     def select_time(self):
-        pass
-
+            if self.loop == "n":
+                self.ask_time = input("quieres ejecutarlo con tiempo (y/n): ")
+                if self.ask_time == "y":
+                    pass # tengo que pensar que hacer aquí
+        
 if "__main__" == __name__:
     c = cheat_keyboard()
     c.select_number_of_times()
