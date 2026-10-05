@@ -11,22 +11,30 @@ class ask_keyboard:
         self.number_time = input("quieres ejecutarlo un número de veces (y/n): ")
         if self.number_time == "y":
             self.time = int(input("cuantas veces [introduzca un número por favor]: "))
-            try:                
+            try:
+                time.sleep(5)                
                 for _ in range(self.time):
-                    keyboard.send(self.key)
-                    if keyboard.is_pressed("f6"): # esto no funciona
+                    if keyboard.is_pressed("+"):
+                        print("se ha podido parar1")
                         break
+                    else:
+                        keyboard.send(self.key)
+                        if keyboard.is_pressed("+"):
+                            print("se ha podido parar2")
+                            break
             except KeyboardInterrupt as number_time_interrupt:
                 print(f"has interrumpido la acción{number_time_interrupt}")
                 
         elif self.number_time == "n":
             self.loop = input("quieres mejor ejecutarlo en bucle (y/n): ")
             if self.loop == "y":
-                try:    
+                try:
+                    time.sleep(5)    
                     while True:
-                        keyboard.send(self.key)
-                        if keyboard.is_pressed("f7"): # esto no funciona
+                        if keyboard.is_pressed("-"):
                             break
+                        else:
+                            keyboard.send(self.key)
                 except KeyboardInterrupt as bool_interrupt:
                             print(f"has interrumpido la acción{bool_interrupt}")
                                     
