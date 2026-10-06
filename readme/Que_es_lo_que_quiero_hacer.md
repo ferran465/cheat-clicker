@@ -4,3 +4,4 @@
 
 3. me gustaria que si solo necesita un tiempo que se lo pregunte para que pueda establecer ese tiempo para la tecla en lugar de ser un bucle infinito
 
+4. Quiero poner una parte que puedas elgir el tiempo de fracción de segundos en la que quieres que el programa se itere en el for es decir que basicamente para que no haya un problema al decir que si lo pusiste en 0 pues basicamente hemm no lo puedes parar ya que va tan rápido que no se puede parar y otra cosa pondria una advertencia o un bloqeo más bien dicho para poder bloquear o avisar que es lapso de tiempo es peligroso y que podria afectar a tu máquina si no se ajusta correctamente 

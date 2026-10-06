@@ -13,8 +13,9 @@ class refactorized_:
                     self.time = int(input("cuantas veces [introduzca un número por favor]: "))
                     try:
                         time.sleep(5)
-                        while True: # no sé porque pero funciona mejor con un while que con un for pero tengo que ver la forma de rompe el bucle del for con le break
-                            print("se ha podido ejecutar")
+                        for _ in range(self.time): # intuio que por un while lo puedes parar más facil ya que con un while se ejecuta infinitamente así que cuando presionamos puedes pararlo cuando quieras pero con un for es como si tuvieras que acabar con la tarea
+                            time.sleep(0.3) # ya lo he entendido con un time.sleep() hace que el programa pueda hacer que en 0,3 segundos se ejecute y ahí estava el problema estaba en que se ejecutaba tan rapido que no se podia parar
+                            keyboard.send(self.key)
                             if keyboard.is_pressed("+"):
                                 print("se ha podido presionar la tecla")
                                 break

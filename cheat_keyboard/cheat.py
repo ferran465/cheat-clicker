@@ -14,6 +14,8 @@ class cheat_keyboard:
                 try:
                     time.sleep(5)                
                     for _ in range(self.time):
+                        time.sleep(0.3) # esto se tiene que hacer que se puede modear (.4 README)
+                        keyboard.send(self.key)
                         if keyboard.is_pressed("+"):
                             print("se ha podido interrumpir la tecla correctamente")
                             break
@@ -40,7 +42,7 @@ class cheat_keyboard:
             if self.loop == "n":
                 self.ask_time = input("quieres ejecutarlo con tiempo (y/n): ")
                 if self.ask_time == "y":
-                    pass # tengo que pensar que hacer aquí
+                    pass # tengo que pensar que hacer aquí <------
         
 if "__main__" == __name__:
     c = cheat_keyboard()
