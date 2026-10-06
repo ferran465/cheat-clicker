@@ -15,12 +15,10 @@ class cheat_keyboard:
                     time.sleep(5)                
                     for _ in range(self.time):
                         if keyboard.is_pressed("+"):
+                            print("se ha podido interrumpir la tecla correctamente")
                             break
                         else:
                             keyboard.send(self.key)
-
-                        if keyboard.is_pressed("+"):
-                            break
                 except KeyboardInterrupt as number_time_interrupt:
                     print(f"has interrumpido la acción{number_time_interrupt}")
 
@@ -28,16 +26,13 @@ class cheat_keyboard:
             if self.number_time == "n":
                     self.loop = input("quieres mejor ejecutarlo en bucle (y/n): ")
                     if self.loop == "y":
-                        try:
-                            time.sleep(5)    
+                        try:    
                             while True:
-                                if keyboard.is_pressed("-"):
+                                if keyboard.is_pressed("+"):
+                                    print("se ha podido interrumpir la tecla correctamente")
                                     break
                                 else:
                                     keyboard.send(self.key)
-
-                                if keyboard.is_pressed("-"):
-                                    break
                         except KeyboardInterrupt as bool_interrupt:
                                     print(f"has interrumpido la acción{bool_interrupt}")
 
