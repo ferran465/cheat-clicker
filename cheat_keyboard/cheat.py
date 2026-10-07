@@ -10,10 +10,10 @@ class cheat_keyboard:
             self.key = str(input("que tecla quieres escojer: "))
             self.number_time = input("quieres ejecutarlo un número de veces (y/n): ")
             if self.number_time == "y":
-                self.time = int(input("cuantas veces [introduzca un número por favor]: "))
+                self.repeat = int(input("cuantas veces [introduzca un número por favor]: "))
                 try:
                     time.sleep(5)                
-                    for _ in range(self.time):
+                    for _ in range(self.repeat):
                         time.sleep(0.3) # esto se tiene que hacer que se puede modear (.4 README)
                         keyboard.send(self.key)
                         if keyboard.is_pressed("+"):
