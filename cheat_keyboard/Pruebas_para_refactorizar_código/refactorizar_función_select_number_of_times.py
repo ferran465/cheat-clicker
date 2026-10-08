@@ -15,12 +15,16 @@ class refactorized_:
                     try:
                         time.sleep(5)
                         for _ in range(self.repeat):
-                            if self.time == {0, 0.1, 0.2}:
+                            if self.time > 0.3:
                                 time.sleep(self.time) # ya lo he entendido con un time.sleep() hace que el programa pueda hacer que en 0,3 segundos se ejecute y ahí estava el problema estaba en que se ejecutaba tan rapido que no se podia parar // ## ahora lo que hace es hacerlo con input
                                 keyboard.send(self.key)
                                 if keyboard.is_pressed("+"):
                                     print("se ha podido presionar la tecla")
                                     break
+                            else:
+                                self.time < 0.3
+                                print("es demasiado bajo el número prueba con un número más alto")
+                                return False
                     except KeyboardInterrupt as number_time_interrupt:
                         print(f"has interrumpido la acción{number_time_interrupt}")
 
