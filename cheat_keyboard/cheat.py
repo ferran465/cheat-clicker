@@ -25,6 +25,8 @@ class cheat_keyboard:
                                 keyboard.send(self.key)
                         else:
                             self.time < 0.3
+                            print("es demasiado bajo el número prueba con un número más alto")
+                            return False
                 except KeyboardInterrupt as number_time_interrupt:
                     print(f"has interrumpido la acción{number_time_interrupt}")
 
