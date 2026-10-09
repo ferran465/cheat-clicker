@@ -33,7 +33,3 @@ if "__main__" == __name__:
     c = refactorized_()
     c.select_number_of_times() 
      
-
-
-
-# necesito hacer que funcione las teclas + para poder parar el teclado

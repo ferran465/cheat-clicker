@@ -15,13 +15,16 @@ class cheat_keyboard:
                 try:
                     time.sleep(5)                
                     for _ in range(self.repeat):
-                        time.sleep(self.time) # esto se tiene que hacer que se puede modear (.4 README)
-                        keyboard.send(self.key)
-                        if keyboard.is_pressed("+"):
-                            print("se ha podido interrumpir la tecla correctamente")
-                            break
-                        else:
+                        if self.time > 0.3:
+                            time.sleep(self.time) # esto se tiene que hacer que se puede modear (.4 README)
                             keyboard.send(self.key)
+                            if keyboard.is_pressed("+"):
+                                print("se ha podido interrumpir la tecla correctamente")
+                                break
+                            else:
+                                keyboard.send(self.key)
+                        else:
+                            self.time < 0.3
                 except KeyboardInterrupt as number_time_interrupt:
                     print(f"has interrumpido la acción{number_time_interrupt}")
 
