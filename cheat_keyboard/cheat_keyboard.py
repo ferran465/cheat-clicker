@@ -66,6 +66,8 @@ if "__main__" == __name__:
     # cuidado que esto tiene relevancia en el orden por culpa de eso me petaba
     c = cheat_keyboard()
     c.select_number_of_times()
-    c.loop_times()
+if c.number_times == "y":
     c.execute_number_times()
-
+else:
+    c.number_times == "n"
+    c.loop_times()
