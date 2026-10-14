@@ -1,6 +1,5 @@
 import keyboard
 import time
-import asyncio
 
 class cheat_keyboard:
     def __init__(self):
