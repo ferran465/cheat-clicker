@@ -78,6 +78,7 @@ if "__main__" == __name__:
     c = cheat_keyboard()
 
     c.block_key()
+    # hay que cambiar el flujo de "__main__" 
     if c.block == "y":
         c.select_number_of_times()
         c.block == "n"
