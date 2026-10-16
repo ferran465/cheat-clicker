@@ -3,13 +3,7 @@ import time
 
 class cheat_keyboard:
     def __init__(self):
-        self.block = ""
-        self.add_block = ""
-        self.number_time = ""
-        self.repeat = 0              # todos inicializan des de 0 es decir todos parten en el inicializador de objetos des de 0 para poder añadir o desincrementar valor
-        self.time = 0.4
-        self.run = "+"
-        self.stop = "-"
+      pass
 
     def block_key(self):
         try:    
@@ -22,15 +16,15 @@ class cheat_keyboard:
             print(f"{block_exception}")
     def select_number_of_times(self):
         try:
-            if self.block.lower() == "n": # si dices que "no" que se ejecute esta parte igual
-                self.key = str(input("que tecla quieres escojer: "))
+            if self.block.lower() == "n": # si dices que "no" que se ejecute esta parte igual por una simple razón y es que si self.block == "n" hace la función igual pero sin la tecla bloqueada
+                self.key = str(input("que tecla quieres escojer para el loop temporal: "))
                 self.number_time = input("quieres ejecutarlo un número de veces (y/n): ")
                 if self.number_time.lower() == "y":
                     self.repeat = int(input("cuantas veces [introduzca un número por favor]: "))
                     self.time = float(input("cual es el lapso de tiempo en el que quieres que ocurra cada iteración ej recomendable = 0.4 0.5 [Advertencia contra menos pongas más rapido será y contra más pongas más lento será]: "))
             else:
-                self.block.lower() == "y" # si dices que "si" que se ejecute esta parte igual
-                self.key = str(input("que tecla quieres escojer: "))
+                self.block.lower() == "y" # si dices que "si" que se ejecute esta parte igual pero con el bloqueo puesto
+                self.key = str(input("que tecla quieres escojer para el loop temporal: "))
                 self.number_time = input("quieres ejecutarlo un número de veces (y/n): ")
                 if self.number_time.lower() == "y":
                     self.repeat = int(input("cuantas veces [introduzca un número por favor]: "))
@@ -40,6 +34,8 @@ class cheat_keyboard:
             print(f"has interrumpido la acción{key_errn_select}") 
 
     def stop_and_run_executions(self):
+            self.stop = "-"
+            self.run = "+"
             if keyboard.on_press_key(self.run):
                 return True
             else:
@@ -75,7 +71,6 @@ class cheat_keyboard:
         if self.number_time.lower() == "n":
             self.loop = input("quieres mejor ejecutarlo en bucle (y/n): ")
             if self.loop.lower() == "y": # hay que hacer que se tenga que elegir una tecla porque si no petaria des de aquí
-                self.loop_key = input("que tecla quieres escojer: ")
                 try:    
                     while True:
                         if self.key != self.add_block:
@@ -95,18 +90,12 @@ class cheat_keyboard:
        
 if "__main__" == __name__:
     # cuidado que esto tiene relevancia en el orden en el que llamas a cada función por culpa de eso me petaba
-    c = cheat_keyboard()
-    
-    
-    if c.block == "n":
-        c.select_number_of_times()
-        c.execute__number_times()
-    if c.number_time == "n":
-        c.loop_times()
+    K_Cheat = cheat_keyboard()
+    K_Cheat.block_key()
+    if K_Cheat.block == "y":
+        K_Cheat.select_number_of_times()
     else:
-        c.block == "y"
-    c.block_key()
-    c.select_number_of_times()
-    c.execute_number_times()
-    if c.number_time == "n":
-        c.loop_times()
+        K_Cheat.block == "n"
+        K_Cheat.select_number_of_times()
+       ## K_Cheat.execute_number_times() 
+       
