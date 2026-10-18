@@ -15,3 +15,5 @@ importante = (())
 6. también a parte del cheat de keyboard quiero poner un cheat para el raton y hacer interfazes diferentes o la misma pero con solo darle a un boton que se active ""pero claro deberé más adelante quitar los inputs o hacer una versión que no pida inputs y que pare el programa cuando tu se lo pidas""
 
 7. También tengo pensado bloquear algún tipo de teclas para que no pueda ser dañino
+
+8. usar la función de keybaord.unblock_key
