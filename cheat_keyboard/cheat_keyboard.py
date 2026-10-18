@@ -32,32 +32,28 @@ class cheat_keyboard:
                 
         except KeyboardInterrupt as key_errn_select:
             print(f"has interrumpido la acción{key_errn_select}") 
-
-    def stop_and_run_executions(self):
-            self.stop = "-"
-            self.run = "+"
-            if keyboard.on_press_key(self.run):
-                return True
-            else:
-                keyboard.on_press_key(self.stop) 
-                return False                   
+           
     def execute_number_times(self):
         try:
             print("espera 5 segundos antes de que se ejecute")
             time.sleep(5)                
             for _ in range(self.repeat):
                 if self.time > 0.3:
-                    time.sleep(self.time) # esto se tiene que hacer que se puede modear (.4 README)
-                    if self.key == self.add_block:
+                    time.sleep(self.time)
+                    if self.key == self.add_block: # compara para que el programa evite tragarse la tecla bloqueada 
+                        print("recuerda que tu tecla ya habia sido bloqueada anteriormente")
                         return False
                     else:
-                        if self.key != self.add_block:
+                        if self.block == "n":
                             keyboard.send(self.key)
-                            if keyboard.on_press_key(self.run, self.stop_and_run_executions): # dispara una sola vez uan callback es decir que solo una vez ejecuta la función cuando la pulsas no hace falta que la mantengas ni que esperes ni nada de eso
-                                return True
-                                
                         else:
-                            if keyboard.on_press_key(self.stop, self.stop_and_run_executions): # necesita de una función para poderse hacer la callback no sirve con solo pasarle un solo parámetro ya que si no python peta y se calla
+                            self.block == "y"
+                            keyboard.block_key(self.add_block) # bloquea la tecla física
+                            keyboard.send(self.key)
+                        if keyboard.is_pressed("+"):
+                            return True
+                        else:
+                            if keyboard.is_pressed("-"):
                                 print("se ha podido interrumpir la tecla correctamente")
                                 break
                                         
@@ -73,16 +69,23 @@ class cheat_keyboard:
             if self.loop.lower() == "y": # hay que hacer que se tenga que elegir una tecla porque si no petaria des de aquí
                 try:    
                     while True:
-                        if self.key != self.add_block:
-                            time.sleep(1) # duerme durante un segundo pero se mantiene vivo el otro segundo es decir que se ejecuta la cosa seria si no hubiera que congelaria la CPU
-                            keyboard.send(self.key)
+                        if self.key == self.add_block: # compara para que el programa evite tragarse la tecla bloqueada
+                            print("recuerda que tu tecla ya habia sido bloqueada anteriormente")
+                            return False
                         else:
-                            self.key == self.add_block
-                            if keyboard.on_press_key(self.run, self.stop_and_run_executions): # dispara una sola vez uan callback es decir que solo una vez ejecuta la función cuando la pulsas no hace falta que la mantengas ni que esperes ni nada de eso
+                            if self.block == "n":
+                                time.sleep(1) # duerme durante un segundo pero se mantiene vivo el otro segundo es decir que se ejecuta la cosa seria si no hubiera que congelaria la CPU
+                                keyboard.send(self.key)
+                            else:
+                                self.block == "y"
+                                keyboard.block_key(self.add_block) # bloquea la tecla física
+                                keyboard.send(self.key)
+                                time.sleep(1)
+                            if keyboard.is_pressed("+"):
                                 return True
                                 
                             else:
-                                if keyboard.on_press_key(self.stop, self.stop_and_run_executions): # necesita de una función para poderse hacer la callback no sirve con solo pasarle un solo parámetro ya que si no python peta y se calla
+                                if keyboard.is_pressed("-"):
                                     print("se ha podido interrumpir la tecla correctamente")
                                     break
                 except KeyboardInterrupt as bool_interrupt:
@@ -97,5 +100,10 @@ if "__main__" == __name__:
     else:
         K_Cheat.block == "n"
         K_Cheat.select_number_of_times()
-       ## K_Cheat.execute_number_times() 
-       
+        if K_Cheat.number_time == "y":
+            K_Cheat.execute_number_times()
+        else:
+            K_Cheat.number_time == "n"
+            K_Cheat.execute_number_time()
+
+            ## arreglar __main__
