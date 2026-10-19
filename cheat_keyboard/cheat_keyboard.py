@@ -1,7 +1,7 @@
 import keyboard
 import time
 
-class cheat_keyboard:
+class prototipe_keyboard:
     def __init__(self):
         self.add_block = ""
         self.number_time = ""
@@ -106,7 +106,7 @@ class cheat_keyboard:
        
 if "__main__" == __name__:
     # cuidado que esto tiene relevancia en el orden en el que llamas a cada función por culpa de eso me petaba
-    K_Cheat = cheat_keyboard()
+    K_Cheat = prototipe_keyboard()
     K_Cheat.block_key()
     if K_Cheat.block == "y":
         K_Cheat._select_number_y_()
