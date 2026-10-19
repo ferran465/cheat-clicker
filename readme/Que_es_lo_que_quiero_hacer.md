@@ -17,3 +17,9 @@ importante = (())
 7. También tengo pensado bloquear algún tipo de teclas para que no pueda ser dañino
 
 8. usar la función de keybaord.unblock_key
+
+9. Poner en el While que tiempo quiere el usuario
+
+10. necesito hacer el prototipo del ratón
+
+11. ((Paso Final hacerlo con TKinter para hacerlo con GUI))

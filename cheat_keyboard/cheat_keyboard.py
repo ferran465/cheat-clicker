@@ -3,7 +3,14 @@ import time
 
 class cheat_keyboard:
     def __init__(self):
-      pass
+        self.add_block = ""
+        self.number_time = ""
+        self.block = ""             # empiezan des de "" str vacio ya que són solo texto
+        self.add_block = ""                 
+        self.key = ""
+        self.number_time = ""
+        self.repeat = 0 # empieza des de 0 ya que són números
+        self.time = 0
 
     def block_key(self):
         try:    
@@ -14,7 +21,8 @@ class cheat_keyboard:
                 print(motivo_bloqueo)
         except Exception as block_exception:
             print(f"{block_exception}")
-    def select_number_of_times(self):
+
+    def _select_number_n_(self):
         try:
             if self.block.lower() == "n": # si dices que "no" que se ejecute esta parte igual por una simple razón y es que si self.block == "n" hace la función igual pero sin la tecla bloqueada
                 self.key = str(input("que tecla quieres escojer para el loop temporal: "))
@@ -22,23 +30,28 @@ class cheat_keyboard:
                 if self.number_time.lower() == "y":
                     self.repeat = int(input("cuantas veces [introduzca un número por favor]: "))
                     self.time = float(input("cual es el lapso de tiempo en el que quieres que ocurra cada iteración ej recomendable = 0.4 0.5 [Advertencia contra menos pongas más rapido será y contra más pongas más lento será]: "))
-            else:
-                self.block.lower() == "y" # si dices que "si" que se ejecute esta parte igual pero con el bloqueo puesto
+
+        except KeyboardInterrupt as key_errn_select_y:
+            print(f"has interrumpido la acción{key_errn_select_y}")
+        
+    def _select_number_y_(self):
+        try:
+            if self.block.lower() == "y": # si dices que "si" que se ejecute esta parte igual pero con el bloqueo puesto
                 self.key = str(input("que tecla quieres escojer para el loop temporal: "))
                 self.number_time = input("quieres ejecutarlo un número de veces (y/n): ")
                 if self.number_time.lower() == "y":
                     self.repeat = int(input("cuantas veces [introduzca un número por favor]: "))
                     self.time = float(input("cual es el lapso de tiempo en el que quieres que ocurra cada iteración ej recomendable = 0.4 0.5 [Advertencia contra menos pongas más rapido será y contra más pongas más lento será]: "))
-                
-        except KeyboardInterrupt as key_errn_select:
-            print(f"has interrumpido la acción{key_errn_select}") 
-           
+            
+        except KeyboardInterrupt as key_errn_select_n:
+            print(f"has interrumpido la acción{key_errn_select_n}")
+        
     def execute_number_times(self):
         try:
             print("espera 5 segundos antes de que se ejecute")
             time.sleep(5)                
             for _ in range(self.repeat):
-                if self.time > 0.3:
+                if self.time > 0:
                     time.sleep(self.time)
                     if self.key == self.add_block: # compara para que el programa evite tragarse la tecla bloqueada 
                         print("recuerda que tu tecla ya habia sido bloqueada anteriormente")
@@ -47,9 +60,9 @@ class cheat_keyboard:
                         if self.block == "n":
                             keyboard.send(self.key)
                         else:
-                            self.block == "y"
-                            keyboard.block_key(self.add_block) # bloquea la tecla física
-                            keyboard.send(self.key)
+                            if self.block == "y":
+                                keyboard.block_key(self.add_block) # bloquea la tecla física
+                                keyboard.send(self.key)
                         if keyboard.is_pressed("+"):
                             return True
                         else:
@@ -57,7 +70,7 @@ class cheat_keyboard:
                                 print("se ha podido interrumpir la tecla correctamente")
                                 break
                                         
-                elif self.time < 0.3:
+                elif self.time < 0:
                         print("es demasiado bajo el número prueba con un número más alto")
                         return False
         except KeyboardInterrupt as number_time_interrupt:
@@ -74,12 +87,12 @@ class cheat_keyboard:
                             return False
                         else:
                             if self.block == "n":
-                                time.sleep(1) # duerme durante un segundo pero se mantiene vivo el otro segundo es decir que se ejecuta la cosa seria si no hubiera que congelaria la CPU
+                                time.sleep(0.3) # duerme durante un segundo pero se mantiene vivo el otro segundo es decir que se ejecuta la cosa seria si no hubiera que congelaria la CPU
                                 keyboard.send(self.key)
                             else:
-                                self.block == "y"
-                                keyboard.block_key(self.add_block) # bloquea la tecla física
-                                keyboard.send(self.key)
+                                if self.block == "y":
+                                    keyboard.block_key(self.add_block) # bloquea la tecla física
+                                    keyboard.send(self.key)
                                 time.sleep(1)
                             if keyboard.is_pressed("+"):
                                 return True
@@ -96,14 +109,18 @@ if "__main__" == __name__:
     K_Cheat = cheat_keyboard()
     K_Cheat.block_key()
     if K_Cheat.block == "y":
-        K_Cheat.select_number_of_times()
-    else:
-        K_Cheat.block == "n"
-        K_Cheat.select_number_of_times()
+        K_Cheat._select_number_y_()
         if K_Cheat.number_time == "y":
             K_Cheat.execute_number_times()
         else:
             K_Cheat.number_time == "n"
-            K_Cheat.execute_number_time()
-
+            K_Cheat.loop_times()
+    else:
+        K_Cheat.block == "n"
+        K_Cheat._select_number_n_()
+        if K_Cheat.number_time == "y":
+            K_Cheat.execute_number_times()
+        else:
+            K_Cheat.number_time == "n"
+            K_Cheat.loop_times()
             ## arreglar __main__
