@@ -95,6 +95,7 @@ class prototipe_keyboard:
                                     keyboard.send(self.key)
                                 time.sleep(1)
                             if keyboard.is_pressed("+"):
+                                keyboard.send(self.key)
                                 return True
                                 
                             else:
