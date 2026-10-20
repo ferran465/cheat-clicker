@@ -15,8 +15,8 @@ if keyboard.add_hotkey("f6", _activate_mouse_and_desactivate):
 else:
     try:
         keyboard.add_hotkey("f6", _activate_mouse_and_desactivate)
-        desactivate_mouse = False
-        pyautogui.click() = desactivate_mouse
+        desactivate_mouse = False ##
+        pyautogui.click() == False ##
     except Exception as f6_event_desactivate:
         print(f"{f6_event_desactivate}")
               
