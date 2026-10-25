@@ -2,8 +2,8 @@ import keyboard
 import pyautogui
 
 while True:
-    print("|||||||")
     if keyboard.is_pressed("1") == True:
+        print("|||||||")
         print("activar")
 
         try:
@@ -16,7 +16,7 @@ while True:
         
         
 
-    else:
+    if keyboard.is_pressed("1"):
         try:
             print("----")
             keyboard.wait("space")
