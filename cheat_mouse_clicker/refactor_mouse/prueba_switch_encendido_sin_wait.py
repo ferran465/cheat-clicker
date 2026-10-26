@@ -1,6 +1,8 @@
 import keyboard
 import pyautogui
 
+pyautogui.FAILSAFE = False
+
 while True:
     if keyboard.is_pressed("1") == True:
         print("activar")

@@ -1,6 +1,7 @@
 import pyautogui
 
 while True:
+    pyautogui.FAILSAFE = False
     try:
         pyautogui.click()
         print("click")
