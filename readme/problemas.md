@@ -86,4 +86,4 @@ Traceback (most recent call last):
   File "C:\Users\Usuario\cheat-clicker\.venv\Lib\site-packages\keyboard\_canonical_names.py", line 1246, in normalize_name
     return canonical_names.get(name, name)
            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-## dice que no es muy recomendable pero para habilitarlo en un bucle infinito donde la opinión del usuario importa más que la nuestra pondremso que Failsafe tenga un valor de False
+## dice que no es muy recomendable pero para habilitarlo en un bucle infinito donde la opinión del usuario importa más que la nuestra pondremos que Failsafe tenga un valor de False
