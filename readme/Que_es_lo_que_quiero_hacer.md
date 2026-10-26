@@ -10,7 +10,7 @@ importante = (())
 
 4. Quiero poner una parte que puedas elgir el tiempo de fracción de segundos en la que quieres que el programa se itere en el for es decir que basicamente para que no haya un problema al decir que si lo pusiste en 0 pues basicamente hemm no lo puedes parar ya que va tan rápido que no se puede parar y otra cosa pondria una advertencia o un bloqueo más bien dicho para poder bloquear o avisar que es lapso de tiempo es peligroso y que podria afectar a tu máquina si no se ajusta correctamente
 
-5. ((QUIERO AÑADIR UNA INTERFAZ GUI PARA QUE SEA MÄS COMODO PARA EL JUGADOR))
+5. ((QUIERO AÑADIR UNA INTERFAZ GUI PARA QUE SEA MáS COMODO PARA EL JUGADOR))
 
 6. también a parte del cheat de keyboard quiero poner un cheat para el raton y hacer interfazes diferentes o la misma pero con solo darle a un boton que se active ""pero claro deberé más adelante quitar los inputs o hacer una versión que no pida inputs y que pare el programa cuando tu se lo pidas""
 
@@ -23,3 +23,5 @@ importante = (())
 10. necesito hacer el prototipo del ratón
 
 11. ((Paso Final hacerlo con TKinter para hacerlo con GUI))
+
+13. "" La razón por la que desabilito FAILSAFE es porque me permite que no bloque la ejecución de click en bucle que tiene la libreria "" 
