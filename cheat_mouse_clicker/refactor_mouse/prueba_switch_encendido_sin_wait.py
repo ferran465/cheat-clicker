@@ -8,7 +8,7 @@ while True:
         print("activar")
 
         try:
-                    
+            while True:        
                 pyautogui.click()
                 print("click")
 
