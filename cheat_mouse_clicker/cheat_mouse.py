@@ -7,10 +7,11 @@ def _activate_mouse_and_desactivate():
     while True:
         try:
             keyboard.is_pressed("f6") # lo que pasa es que aquí si le decimos al programa que si está presionando el usuario tendrá que estár presionando todo el rato y no queremos eso
-            if keyboard.is_pressed("F6") == True:
+            if keyboard.is_pressed("f6") == True:
                 print("se ha podido activar")
                 time.sleep(1)
-                pyautogui.click()
+                while True:
+                    pyautogui.click()
         except Exception as f6_event__activate:
             print(f"{f6_event__activate}")
 
