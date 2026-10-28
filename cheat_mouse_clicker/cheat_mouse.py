@@ -1,16 +1,26 @@
 import keyboard
 import pyautogui
 
-pyautogui.FAILSAFE = False
+class prototipe_mouse:
+    def __init__(self):
+        pass
+    def activate_stop(self):
+        pyautogui.FAILSAFE = False
+        while True:
+            try:
+                if keyboard.is_pressed("1") == True:
+                    print("activar")
+                    while True:
+                        pyautogui.click()
+                        print("click")
 
-while True:
-    if keyboard.is_pressed("1") == True:
-        print("activar")
+                        if keyboard.is_pressed("space"):
+                            print("----")
+                            break
 
-        try:
-            while True:        
-                pyautogui.click()
-                print("click")
+            except Exception as Clicking_errn:
+                    print("no se ha podido clicar", f"{Clicking_errn}")
 
-        except Exception as Click_errn:
-            print("no se ha podido clicar", f"{Click_errn}")
+if "__main__" == __name__:
+    M_Cheat = prototipe_mouse() 
+    M_Cheat.activate_stop()
