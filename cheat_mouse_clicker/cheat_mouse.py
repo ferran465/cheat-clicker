@@ -8,13 +8,13 @@ class prototipe_mouse:
         pyautogui.FAILSAFE = False
         while True:
             try:
-                if keyboard.is_pressed("1") == True:
+                if keyboard.is_pressed("f6") == True:
                     print("activar")
                     while True:
                         pyautogui.click()
                         print("click")
 
-                        if keyboard.is_pressed("space"):
+                        if keyboard.is_pressed("f7"):
                             print("----")
                             break
 
