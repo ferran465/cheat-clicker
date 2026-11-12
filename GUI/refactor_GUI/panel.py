@@ -15,4 +15,3 @@ def panel():
     pnl.mainloop()
 
 panel()
-    
